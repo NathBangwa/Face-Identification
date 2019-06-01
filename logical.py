@@ -16,7 +16,7 @@ def predict_face(image:list):
     predictor = CustomVisionPredictionClient(config.prediction_key, endpoint=config.ENDPOINT)
 
     #with open(base_image_url + "images/Test/test_image.jpg", "rb") as image_contents:
-    results = predictor.classify_image(config.projet_id, config.publish_iteration_name, image_contents)
+    results = predictor.classify_image(config.project_id, config.publish_iteration_name, image_contents)
 
     # hight probability
     prediction = results.predictions[0]
